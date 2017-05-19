@@ -1,6 +1,6 @@
 # Course-Projects
-Data Structures:
-1. RChouLab1
-2. RChouLab2
-3. RChouLab3
-4. RChouLab4
+#### Data Structures
+- RChouLab1
+- RChouLab2
+- RChouLab3
+- RChouLab4
