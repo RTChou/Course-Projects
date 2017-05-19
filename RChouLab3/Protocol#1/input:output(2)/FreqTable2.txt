@@ -1,0 +1,35 @@
+A,63
+B,21
+C,18
+D,20
+E,89
+F,16
+G,15
+H,37
+I,54
+J,5
+K,7
+L,38
+M,14
+N,50
+
+
+
+
+O,84
+P,14
+Q,0
+R,45
+S,48
+T,74
+U,33
+V,11
+W,21
+X,0
+Y,31
+Z,0
+ ,166
+*,0 // won’t be used to build the tree
+#,0
+
+## Renee Ti Chou
