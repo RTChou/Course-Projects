@@ -1,0 +1,164 @@
+## Renee Ti Chou
+
+ab+C-
+LD  A
+AD  B
+ST  TEMP1
+LD  TEMP1
+SB  C
+ST  TEMP2
+Conversion completed!
+
+ABC   +-
+LD  B
+AD  C
+ST  TEMP1
+LD  A
+SB  TEMP1
+ST  TEMP2
+Conversion completed!
+
+3A-
+Invalid symbol: 3
+
+3A-*
+Invalid symbol: 3
+
+A BC*/
+LD  B
+ML  C
+ST  TEMP1
+LD  A
+DV  TEMP1
+ST  TEMP2
+Conversion completed!
+
+AB+++
+LD  A
+AD  B
+ST  TEMP1
+Insufficient operand(s) for: +
+
+AB*C/
+LD  A
+ML  B
+ST  TEMP1
+LD  TEMP1
+DV  C
+ST  TEMP2
+Conversion completed!
+
+
+(blank line)
+
+ ABC*/D/
+LD  B
+ML  C
+ST  TEMP1
+LD  A
+DV  TEMP1
+ST  TEMP2
+LD  TEMP2
+DV  D
+ST  TEMP3
+Conversion completed!
+
+ABC DE
+Insufficient operator for: D and E
+
+ABC/*D-  
+LD  B
+DV  C
+ST  TEMP1
+LD  A
+ML  TEMP1
+ST  TEMP2
+LD  TEMP2
+SB  D
+ST  TEMP3
+Conversion completed!
+
+BED-+;
+LD  E
+SB  D
+ST  TEMP1
+LD  B
+AD  TEMP1
+ST  TEMP2
+Invalid symbol: ;
+
+AB+C- AB+D-
+LD  A
+AD  B
+ST  TEMP1
+LD  TEMP1
+SB  C
+ST  TEMP2
+LD  A
+AD  B
+ST  TEMP3
+LD  TEMP3
+SB  D
+ST  TEMP4
+Insufficient operator for: TEMP2 and TEMP4
+
+AB+C- AB+D-*CD+
+LD  A
+AD  B
+ST  TEMP1
+LD  TEMP1
+SB  C
+ST  TEMP2
+LD  A
+AD  B
+ST  TEMP3
+LD  TEMP3
+SB  D
+ST  TEMP4
+LD  TEMP2
+ML  TEMP4
+ST  TEMP5
+LD  C
+AD  D
+ST  TEMP6
+Insufficient operator for: TEMP5 and TEMP6
+
+-AB
+Insufficient operand(s) for: -
+
+-
+Insufficient operand(s) for: -
+
+a     b+
+LD  A
+AD  B
+ST  TEMP1
+Conversion completed!
+
+ABC+=
+LD  B
+AD  C
+ST  TEMP1
+Invalid symbol: =
+
+AB/AA+*
+LD  A
+DV  B
+ST  TEMP1
+LD  A
+AD  A
+ST  TEMP2
+LD  TEMP1
+ML  TEMP2
+ST  TEMP3
+Conversion completed!
+
+ZZZ++
+LD  Z
+AD  Z
+ST  TEMP1
+LD  Z
+AD  TEMP1
+ST  TEMP2
+Conversion completed!
+
