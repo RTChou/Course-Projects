@@ -1,5 +1,5 @@
 # Course-Projects
-#### Data Structures
+### Data Structures
 - RChouLab1
 - RChouLab2
 - RChouLab3
