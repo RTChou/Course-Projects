@@ -1,6 +1,6 @@
 # Course-Projects
 ### Data Structures
-- Lab1
-- Lab2
-- Lab3
-- Lab4
+- Lab 1
+- Lab 2
+- Lab 3
+- Lab 4
