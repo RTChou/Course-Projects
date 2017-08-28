@@ -1,0 +1,43 @@
+================= Trace Log =================
+
+# Number of bidding agents: 
+---------------------------
+5
+
+# The bids in order are: 
+------------------------
+21 2 97 52 40 
+
+# The process of auction: 
+-------------------------
+b* initialized as 0
+
+bid = 21...
+21 > b*
+b* updated
+Update times: 1
+b* is now: 21
+
+bid = 2...
+2 < b*
+No update
+Update times: 1
+b* is now: 21
+
+bid = 97...
+97 > b*
+b* updated
+Update times: 2
+b* is now: 97
+
+bid = 52...
+52 < b*
+No update
+Update times: 2
+b* is now: 97
+
+bid = 40...
+40 < b*
+No update
+Update times: 2
+b* is now: 97

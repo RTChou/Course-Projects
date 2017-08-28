@@ -1,0 +1,73 @@
+================= Trace Log =================
+
+# Number of bidding agents: 
+---------------------------
+10
+
+# The bids in order are: 
+------------------------
+486 212 273 23 21 602 549 969 323 293 
+
+# The process of auction: 
+-------------------------
+b* initialized as 0
+
+bid = 486...
+486 > b*
+b* updated
+Update times: 1
+b* is now: 486
+
+bid = 212...
+212 < b*
+No update
+Update times: 1
+b* is now: 486
+
+bid = 273...
+273 < b*
+No update
+Update times: 1
+b* is now: 486
+
+bid = 23...
+23 < b*
+No update
+Update times: 1
+b* is now: 486
+
+bid = 21...
+21 < b*
+No update
+Update times: 1
+b* is now: 486
+
+bid = 602...
+602 > b*
+b* updated
+Update times: 2
+b* is now: 602
+
+bid = 549...
+549 < b*
+No update
+Update times: 2
+b* is now: 602
+
+bid = 969...
+969 > b*
+b* updated
+Update times: 3
+b* is now: 969
+
+bid = 323...
+323 < b*
+No update
+Update times: 3
+b* is now: 969
+
+bid = 293...
+293 < b*
+No update
+Update times: 3
+b* is now: 969

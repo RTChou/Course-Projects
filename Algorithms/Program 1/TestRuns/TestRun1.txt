@@ -1,0 +1,109 @@
+==== Input #1 =================================
+
+1 2 
+
+==== Input #2 =================================
+
+1 2 3 4 
+
+==== Trace Logs ===============================
+
+-- 1. Converting sorted array into AVL tree
+
+Input #1
+--------
+#Trace: AVL tree built from an array.
+#Trace: Inorder printing of AVL tree--
++-----------+--------+----------------+
+| Node Data | Height | Balance Factor |
++-----------+--------+----------------+
+|         1 |      1 |              1 |
+|         2 |      0 |              0 |
++-----------+--------+----------------+
+
+Input #2
+--------
+#Trace: AVL tree built from an array.
+#Trace: Inorder printing of AVL tree--
++-----------+--------+----------------+
+| Node Data | Height | Balance Factor |
++-----------+--------+----------------+
+|         1 |      0 |              0 |
+|         2 |      2 |              1 |
+|         3 |      1 |              1 |
+|         4 |      0 |              0 |
++-----------+--------+----------------+
+
+
+-- 2. Converting AVL tree to sorted array
+
+Input #1
+--------
+#Trace: AVL tree converted to sorted array.
+#Trace: Sorted array-- 1 2 
+
+Input #2
+--------
+#Trace: AVL tree converted to sorted array.
+#Trace: Sorted array-- 1 2 3 4 
+
+
+-- 3. Merging two AVL trees
+
+#Trace: Merging two AVL trees, where m = 2 and n = 4...
+#Trace: O(mlg(m+n)) merging applied.
+#Trace: AVL tree converted to sorted array.
+#Trace: Sorted array-- 1 2 
+#Trace: Inserting 1 into AVL tree...
+#Trace: 1 < 2, go down to left child.
+#Trace: 1 >= 1, attached as right child of 1.
+#Trace: Inserting 2 into AVL tree...
+#Trace: 2 >= 2, go down to right child.
+#Trace: 2 < 3, attached as left child of 3.
++-----------+--------+----------------+
+| Node Data | Height | Balance Factor |
++-----------+--------+----------------+
+|         1 |      1 |              1 |
+|         1 |      0 |              0 |
+|         2 |      2 |              0 |
+|         2 |      0 |              0 |
+|         3 |      1 |              0 |
+|         4 |      0 |              0 |
++-----------+--------+----------------+
+
+
+-- 4. Additional tests
+
+#Trace: AVL Tree initialized.
+#Trace: Inserting 6 into AVL tree...
+#Trace: 6 inserted as root.
+#Trace: Inserting 5 into AVL tree...
+#Trace: 5 < 6, attached as left child of 6.
+#Trace: Inserting 4 into AVL tree...
+#Trace: 4 < 6, go down to left child.
+#Trace: 4 < 5, attached as left child of 5.
+#Trace: LL case occurred on node containing 6.
+#Trace: Right rotation applied to node containing 6.
++-----------+--------+----------------+
+| Node Data | Height | Balance Factor |
++-----------+--------+----------------+
+|         4 |      0 |              0 |
+|         5 |      1 |              0 |
+|         6 |      0 |              0 |
++-----------+--------+----------------+
+
+==== Output ===================================
+
+-- Result of merging Input #1 and Input #2
+
++-----------+--------+----------------+
+| Node Data | Height | Balance Factor |
++-----------+--------+----------------+
+|         1 |      1 |              1 |
+|         1 |      0 |              0 |
+|         2 |      2 |              0 |
+|         2 |      0 |              0 |
+|         3 |      1 |              0 |
+|         4 |      0 |              0 |
++-----------+--------+----------------+
+

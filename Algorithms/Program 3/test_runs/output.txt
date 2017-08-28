@@ -1,0 +1,241 @@
+========== Input 1 ==============
+
+L 10 1 10 10 
+H 5 50 5 1 
+
+========== Output 1 =============
+
+1. Optimal Job Planning Algorithm
+---------------------------------
+
+Trace: l[10, 1, 10, 10 ] (array starts at 1)
+Trace: h[5, 50, 5, 1 ] (array starts at 1)
+Trace: let v[0..4] and j[0..4] be new arrays
+Trace: i = 0
+Trace: v[0] = 0
+Trace: i = 1
+Trace: max(l[1], h[1]) = max(10, 5) ==> v[1] = 10, j[1] = "L"
+Trace: i = 2
+Trace: max(l[2] + v[1], h[2] + v[0]) = max(11, 50) ==> v[2] = 50, j[2] = "H"
+Trace: i = 3
+Trace: max(l[3] + v[2], h[3] + v[1]) = max(60, 15) ==> v[3] = 60, j[3] = "L"
+Trace: i = 4
+Trace: max(l[4] + v[3], h[4] + v[2]) = max(70, 51) ==> v[4] = 70, j[4] = "L"
+Trace: v[0, 10, 50, 60, 70 ] (array starts at 0)
+Trace: j[null, L, H, L, L ] (array starts at 0)
+
+# The optimal plan is:
+
+Trace: j[4] = "L" ==> find job at j[3]
+Trace: j[3] = "L" ==> find job at j[2]
+Trace: j[2] = "H" ==> find job at j[0]
+Trace: i = 0, return
+
+plan[NA, H, L, L ] (array starts at 1)
+
+# The maximum value is: 70
+
+
+2. Flawed Job Planning Algorithm
+--------------------------------
+
+# The optimal plan is:
+
+Trace: l[10, 1, 10, 10 ] (array starts at 1)
+Trace: h[5, 50, 5, 1 ] (array starts at 1)
+Trace: i = 1
+Trace: h[2] > l[1] + l[2] ==> choose no job in week 1, high stress job in week 2
+Trace: continue with iteration 3
+Trace: i = 3
+Trace: h[4] <= l[3] + l[4] ==> choose low stress job in week 3
+Trace: continue with iteration 4
+Trace: i = 4 = n
+Trace: find job for the last week ==> choose low stress job in week 4
+
+plan[NA, H, L, L ] (array starts at 1)
+
+# The maximum value is: 70
+
+# The plan is the same as the correct one
+
+
+========== Input 2 ==============
+
+L 10 5 50 
+H 100 20 5 
+
+========== Output 2 =============
+
+1. Optimal Job Planning Algorithm
+---------------------------------
+
+Trace: l[10, 5, 50 ] (array starts at 1)
+Trace: h[100, 20, 5 ] (array starts at 1)
+Trace: let v[0..3] and j[0..3] be new arrays
+Trace: i = 0
+Trace: v[0] = 0
+Trace: i = 1
+Trace: max(l[1], h[1]) = max(10, 100) ==> v[1] = 100, j[1] = "H"
+Trace: i = 2
+Trace: max(l[2] + v[1], h[2] + v[0]) = max(105, 20) ==> v[2] = 105, j[2] = "L"
+Trace: i = 3
+Trace: max(l[3] + v[2], h[3] + v[1]) = max(155, 105) ==> v[3] = 155, j[3] = "L"
+Trace: v[0, 100, 105, 155 ] (array starts at 0)
+Trace: j[null, H, L, L ] (array starts at 0)
+
+# The optimal plan is:
+
+Trace: j[3] = "L" ==> find job at j[2]
+Trace: j[2] = "L" ==> find job at j[1]
+Trace: j[1] = "H", return
+
+plan[H, L, L ] (array starts at 1)
+
+# The maximum value is: 155
+
+
+2. Flawed Job Planning Algorithm
+--------------------------------
+
+# The optimal plan is:
+
+Trace: l[10, 5, 50 ] (array starts at 1)
+Trace: h[100, 20, 5 ] (array starts at 1)
+Trace: i = 1
+Trace: h[2] > l[1] + l[2] ==> choose no job in week 1, high stress job in week 2
+Trace: continue with iteration 3
+Trace: i = 3 = n
+Trace: find job for the last week ==> choose low stress job in week 3
+
+plan[NA, H, L ] (array starts at 1)
+
+# The maximum value is: 70
+
+# The flawed algorithm breaks down in week 1
+
+
+========== Input 3 ==============
+
+L 5 1 20 15 
+H 10 30 5 
+
+Error: The numbers of low stress and high stress jobs are not equal for input 3
+
+
+========== Input 4 ==============
+
+L 10 5 10 10 
+H 5 5 20 100 
+
+========== Output 4 =============
+
+1. Optimal Job Planning Algorithm
+---------------------------------
+
+Trace: l[10, 5, 10, 10 ] (array starts at 1)
+Trace: h[5, 5, 20, 100 ] (array starts at 1)
+Trace: let v[0..4] and j[0..4] be new arrays
+Trace: i = 0
+Trace: v[0] = 0
+Trace: i = 1
+Trace: max(l[1], h[1]) = max(10, 5) ==> v[1] = 10, j[1] = "L"
+Trace: i = 2
+Trace: max(l[2] + v[1], h[2] + v[0]) = max(15, 5) ==> v[2] = 15, j[2] = "L"
+Trace: i = 3
+Trace: max(l[3] + v[2], h[3] + v[1]) = max(25, 30) ==> v[3] = 30, j[3] = "H"
+Trace: i = 4
+Trace: max(l[4] + v[3], h[4] + v[2]) = max(40, 115) ==> v[4] = 115, j[4] = "H"
+Trace: v[0, 10, 15, 30, 115 ] (array starts at 0)
+Trace: j[null, L, L, H, H ] (array starts at 0)
+
+# The optimal plan is:
+
+Trace: j[4] = "H" ==> find job at j[2]
+Trace: j[2] = "L" ==> find job at j[1]
+Trace: j[1] = "L", return
+
+plan[L, L, NA, H ] (array starts at 1)
+
+# The maximum value is: 115
+
+
+2. Flawed Job Planning Algorithm
+--------------------------------
+
+# The optimal plan is:
+
+Trace: l[10, 5, 10, 10 ] (array starts at 1)
+Trace: h[5, 5, 20, 100 ] (array starts at 1)
+Trace: i = 1
+Trace: h[2] <= l[1] + l[2] ==> choose low stress job in week 1
+Trace: continue with iteration 2
+Trace: i = 2
+Trace: h[3] > l[2] + l[3] ==> choose no job in week 2, high stress job in week 3
+Trace: continue with iteration 4
+Trace: i = 4 = n
+Trace: find job for the last week ==> choose low stress job in week 4
+
+plan[L, NA, H, L ] (array starts at 1)
+
+# The maximum value is: 40
+
+# The flawed algorithm breaks down in week 2
+
+
+========== Input 5 ==============
+
+L 10 10 1 10 
+H 5 30 100 20 
+
+========== Output 5 =============
+
+1. Optimal Job Planning Algorithm
+---------------------------------
+
+Trace: l[10, 10, 1, 10 ] (array starts at 1)
+Trace: h[5, 30, 100, 20 ] (array starts at 1)
+Trace: let v[0..4] and j[0..4] be new arrays
+Trace: i = 0
+Trace: v[0] = 0
+Trace: i = 1
+Trace: max(l[1], h[1]) = max(10, 5) ==> v[1] = 10, j[1] = "L"
+Trace: i = 2
+Trace: max(l[2] + v[1], h[2] + v[0]) = max(20, 30) ==> v[2] = 30, j[2] = "H"
+Trace: i = 3
+Trace: max(l[3] + v[2], h[3] + v[1]) = max(31, 110) ==> v[3] = 110, j[3] = "H"
+Trace: i = 4
+Trace: max(l[4] + v[3], h[4] + v[2]) = max(120, 50) ==> v[4] = 120, j[4] = "L"
+Trace: v[0, 10, 30, 110, 120 ] (array starts at 0)
+Trace: j[null, L, H, H, L ] (array starts at 0)
+
+# The optimal plan is:
+
+Trace: j[4] = "L" ==> find job at j[3]
+Trace: j[3] = "H" ==> find job at j[1]
+Trace: j[1] = "L", return
+
+plan[L, NA, H, L ] (array starts at 1)
+
+# The maximum value is: 120
+
+
+2. Flawed Job Planning Algorithm
+--------------------------------
+
+# The optimal plan is:
+
+Trace: l[10, 10, 1, 10 ] (array starts at 1)
+Trace: h[5, 30, 100, 20 ] (array starts at 1)
+Trace: i = 1
+Trace: h[2] > l[1] + l[2] ==> choose no job in week 1, high stress job in week 2
+Trace: continue with iteration 3
+Trace: i = 3
+Trace: h[4] > l[3] + l[4] ==> choose no job in week 3, high stress job in week 4
+
+plan[NA, H, NA, H ] (array starts at 1)
+
+# The maximum value is: 50
+
+# The flawed algorithm breaks down in week 1
+
+
