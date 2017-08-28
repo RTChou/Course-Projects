@@ -1,0 +1,15 @@
+Enter an oligonucleotide sequence: TATGAGCCCGTA
+User input:         TATGAGCCCGTA
+Reverse complement: TACGGGCTCATA
+Enter an oligonucleotide sequence: AATTGCGATAAC
+User input:         AATTGCGATAAC
+Reverse complement: GTTATCGCAATT
+Enter an oligonucleotide sequence: CCTGGAGTTTCA
+User input:         CCTGGAGTTTCA
+Reverse complement: TGAAACTCCAGG
+Enter an oligonucleotide sequence: AATT
+User input:         AATT
+Reverse complement: AATT
+Enter an oligonucleotide sequence: PYTHON
+User input:         PYTHON
+Invalid character(s): should be A, C, G, or T

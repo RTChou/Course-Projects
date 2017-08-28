@@ -2,9 +2,9 @@
 
 The source code for this project was built using Eclipse, and it can be compiled by JDK 8.
 
-This assignment contains two folders: Protocol#1 and Protocol #2. 
+This assignment contains two folders: Protocol 1 and Protocol 2. 
 
-Protocol#1 uses the protocol given by assign instruction; Protocol #2 uses a protocol which resolves ties alphabetically first, and then by the length of groups. 
+Protocol 1 uses the protocol given by assign instruction; Protocol 2 uses a protocol which resolves ties alphabetically first, and then by the length of groups. 
 
 !!Note: The differences are the compareTo method in Node.java, and the code strings in Code2.txt
 
