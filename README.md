@@ -1,14 +1,14 @@
 # Course-Projects
 ### Data Structures
-- Lab 1
-- Lab 2
-- Lab 3
-- Lab 4
+- Lab 1 - Stack
+- Lab 2 - Recursion & Time Complexity
+- Lab 3 - Huffman Encoding Tree
+- Lab 4 - Quicksort vs. Heapsort
 
 ### Algorithms
-- Program 1
-- Program 2
-- Program 3
+- Program 1 - AVL Tree
+- Program 2 - Randomized Algorithem
+- Program 3 - Dynamic Programming
 
 ### Bioinformatics
 - Program 1
