@@ -11,6 +11,6 @@
 - Program 3 - Dynamic Programming
 
 ### Bioinformatics
-- Program 1
-- Program 2
-- Program 3
+- Program 1 - Reverse Complement
+- Program 2 - Addressing BLASTN files
+- Program 3 - Parcing GFF3 files
