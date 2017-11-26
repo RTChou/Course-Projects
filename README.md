@@ -13,4 +13,4 @@
 ### Bioinformatics
 - Program 1 - Reverse Complement
 - Program 2 - Addressing BLASTN files
-- Program 3 - Parcing GFF3 files
+- Program 3 - Parsing GFF3 files
