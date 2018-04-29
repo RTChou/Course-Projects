@@ -1,4 +1,4 @@
-# Course-Projects
+# Course_Projects
 ### Data Structures
 - Lab 1 - Stack
 - Lab 2 - Recursion
